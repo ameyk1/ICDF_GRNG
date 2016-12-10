@@ -1,6 +1,6 @@
 clear all;clc;
 
-iterations=100;
+% N=10000;
 % initial parameters for s1,s2,s3
 s1 = 11357407135578037661;
 s2 = 16405737874297512876;
@@ -8,7 +8,6 @@ s3 = 13098074952039773637;
 
 load('coef.mat');
 
-for i = 1: iterations
 [s1,s2,s3,c_rand]=taus_urng64(s1,s2,s3);
 % Spliting URNG output in 4 different ways
 tauss_rand=dec2bin(c_rand);
@@ -39,7 +38,7 @@ add0= mul0 + Coef1; % Q14.3 + Q3.14 = Q14.4
 mul1 = add0 * masked_data; % Q14.4 * Q15
 add1 = mul1 + Coef0; % Q14.4
 add1_fix = float2fix(add1,3);% Q14.3 
-add1_fix_acc=acc_mat(add1,add1_fix,0.05);
-add1_bin = dec2fix(add1,4,18);
-end
+add1_fix_acc=acc_mat(add1,add1_fix,0.000005);
+add1_bin = dec2fix(add1,4,18)
+
 % if(urng_seg1)

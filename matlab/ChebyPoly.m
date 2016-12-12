@@ -18,20 +18,21 @@ for i = 1: size(a,2)-2;
 end
 % Saving Coefficients for Matlab use
 save('coef.mat','coef');
-%  Fixed to 3Q18 fixed point
+%  Fixed to Q2.18 fixed point
 coef0_fix=float2fix(coef(:,1),18);
 coef0_fix_acc=acc_mat(coef(:,1),coef0_fix,0.000005);
-% Fixed to 4.14 fixed point
+% Fixed to Q3.14 fixed point
 coef1_fix=float2fix(coef(:,2),14);
 coef1_fix_acc=acc_mat(coef(:,2),coef1_fix,0.00005);
-% Fixed to 1.17 fixed point
+% Fixed to Q1.17 fixed point
 coef2_fix=float2fix(coef(:,3),17);
 coef2_fix_acc=acc_mat(coef(:,3),coef2_fix,0.000005);
 %  Integer and Fractional Bits
 frac_bits = [18,14,17];
 dec_bits = [3,4,1];
+total_bits =[21,18,18];
 %  Converting Decimal to Binary for Hardware Verilog Code
-[coef_verilog]=convert_verilog(frac_bits,dec_bits,coef);
+[coef_verilog]=convert_verilog(frac_bits,total_bits,coef);
 % Printing coef_verilog in file to copy in ROM_coef.v verilog file
 fileID = fopen('coef_verilog.txt', 'w');
 for i= 1: N

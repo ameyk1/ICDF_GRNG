@@ -24,24 +24,41 @@ wire [6:0] segment; // Address for ROM_coef table 2
  wire [20:0] coef0;
  wire signed [17:0] ma18_out;
  wire signed [15:0] ma21_out;
-
+ wire urng_seg1;
+ wire [1:0] urng_seg2;
+ wire [14:0]urng_seg3;
+ wire [60:0]urng_seg4;
 // --------------------------------------
 // Uniform random number generator (URNG)
 // --------------------------------------
-taus_urng64 urng (
+taus_urng64 
+//				#( // initial parameters for s1,s2,s3
+//					.s1_init(seed_s1),
+//					.s2_init(seed_s2),
+//					.s3_init(seed_s3)
+//					)
+	urng(
     .clk(clk), 
     .rst(rst), 			// I: Global IO (clock, reset)
     .en_taus(en_icdf),  // I: Module Enable signal
-    .taus_out(taus_out) // O: [63:0] Tausworthe Random number
+    .taus_out(taus_out),// O: [63:0] Tausworthe Random number
+	 .s1_init(seed_s1), 
+    .s2_init(seed_s2), 
+    .s3_init(seed_s3)
     );
 // --------------------------------------
 // Polynomial Interpolation 
 // --------------------------------------
+assign urng_seg1 = taus_out[0];
+assign urng_seg2 = taus_out[2:1];
+assign urng_seg3 = taus_out[17:3];
+assign urng_seg4 = taus_out[63:3];
+
 Lead0Detect64 LZD (
     .clk(clk), 
     .rst(rst), 			// I: Global IO (clock, reset)
     .en_lzd(en_icdf),       // I: Module Enable signal
-    .in(taus_out[63:3]),// I: [60:0]number to detect leading zeros 
+    .in(urng_seg4),// I: [60:0]number to detect leading zeros 
     .zero_pos(zero_pos) // O: [5:0] Leading zero position
     );
 // Lead detector Output goes to two module ROM_trans and mask to zero
@@ -50,12 +67,12 @@ mask20_15 mask20 (
     .rst(rst), 					// I: Global IO (clock, reset)
     .en_mask(en_icdf),          // I: Module Enable signal
     .zero_pos(zero_pos),        // I: [5:0] Leading Zero Position
-    .urng_seg3(taus_out[17:3]),      // I: [14:0] URNG data [17:3]
+    .urng_seg3(urng_seg3),      // I: [14:0] URNG data [17:3]
     .masked_data(masked_data)   // O: [14:0] Masked data
     );	 
 
 // ROM_trans is nothing but LZD (Bullet Point 5 : section 3A)
-assign segment = (rst | ~en_icdf) ? 7'd0 : zero_pos + taus_out[2:1];
+assign segment = (rst | ~en_icdf) ? 7'd0 : zero_pos + urng_seg2;
 
 ROM_coef rom_coef (
     .clk(clk), 
@@ -91,7 +108,7 @@ Mul18_Add21 ma21 (
 always@(posedge clk)
 	if (rst | ~en_icdf)
 		gauss_rng<=16'd0;
-	else if (taus_out[0])
+	else if (urng_seg1)
 		gauss_rng<=ma21_out;
 	else 
 		gauss_rng<=~ma21_out+1'b1;

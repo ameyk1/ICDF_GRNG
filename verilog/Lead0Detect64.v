@@ -22,7 +22,7 @@ wire [3:0] v4;			// Valid bit for 4th stage (LZD16)
 wire [4:0] p5 [1:0];	// Position bit for 5th stage (LZD32) 
 wire v5;				// Valid bit for 5th stage (LZD32)
 wire [5:0] p6;			// Position bit for 6th stage (LZD64)
-wire v6;                // Valid bit for 6th stage (LZD64)
+// wire v6;                // Valid bit for 6th stage (LZD64)
 // -----------------------------------------
 // Stage -1 : Position bit Calculation
 // -----------------------------------------

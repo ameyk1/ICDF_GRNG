@@ -1,15 +1,20 @@
-module taus_urng64#( // initial parameters for s1,s2,s3
-					parameter s1_init = 64'd11357407135578037661,
-					parameter s2_init = 64'd16405737874297512876,
-					parameter s3_init = 64'd13098074952039773637
-					)
+module taus_urng64
+//					#( // initial parameters for s1,s2,s3
+//					parameter s1_init = 64'd11357407135578037661,
+//					parameter s2_init = 64'd16405737874297512876,
+//					parameter s3_init = 64'd13098074952039773637
+//					)
 					( clk,rst,		// I: Global IO (clock, reset)
 					  en_taus,		// I: Module Enable signal
-					  taus_out		// O: [63:0] Tausworthe Random number
+					  taus_out,		// O: [63:0] Tausworthe Random number
+					  s1_init,
+					  s2_init,
+					  s3_init
 					);
 					
 input clk,rst;				// I: Global IO (clock, reset)
 input en_taus;              // I: Module Enable signal
+input [63:0] s1_init,s2_init,s3_init; // I: Seed values for s1,s2,s3
 output reg [63:0] taus_out; // O: [63:0] Tausworthe Random number
 
 reg [63:0] s1,s2,s3; 		// 64-bit temporary registers
@@ -20,9 +25,9 @@ always@(posedge clk)
 			s1<=s1_init;
 			s2<=s2_init;
 			s3<=s3_init;
-			s1<=64'd0;
-			s2<=64'd0;
-			s3<=64'd0;
+			b1 <= 64'd0;
+			b2 <= 64'd0;
+			b3 <= 64'd0;
 			taus_out<=64'd0;
 		end
 	else

@@ -35,6 +35,6 @@ always@(posedge clk)
 			ma21_signed<=m1_temp+c0_signed;
 		end
 // Truncation
-assign ma21_out = ma21_signed[36:21];
+assign ma21_out = ma21_signed[15:0];
 
 endmodule

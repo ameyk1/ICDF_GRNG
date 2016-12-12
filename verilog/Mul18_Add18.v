@@ -35,6 +35,6 @@ always@(posedge clk)
 		end
 
 // Truncation 
-assign ma18_out = ma18_signed[36:19];
+assign ma18_out = ma18_signed[17:0];
 
 endmodule

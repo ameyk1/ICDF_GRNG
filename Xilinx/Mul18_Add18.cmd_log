@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj ICDF -o C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/Mul18_Add18.tfi -lib work C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF//Mul18_Add18.v -module Mul18_Add18 -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

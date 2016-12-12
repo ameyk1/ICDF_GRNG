@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+xst -intstyle ise -ifn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.xst" -ofn "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_icdf.ucf -p xc5vlx85t-ff1136-2 top_icdf.ngc top_icdf.ngd  
+map -intstyle ise -p xc5vlx85t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o top_icdf_map.ncd top_icdf.ngd top_icdf.pcf 
+par -w -intstyle ise -ol high -mt off top_icdf_map.ncd top_icdf.ncd top_icdf.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_icdf.twx top_icdf.ncd -o top_icdf.twr top_icdf.pcf -ucf top_icdf.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_icdf.ucf -p xc5vlx85t-ff1136-2 top_icdf.ngc top_icdf.ngd  
+map -intstyle ise -p xc5vlx85t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o top_icdf_map.ncd top_icdf.ngd top_icdf.pcf 
+par -w -intstyle ise -ol high -mt off top_icdf_map.ncd top_icdf.ncd top_icdf.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_icdf.twx top_icdf.ncd -o top_icdf.twr top_icdf.pcf -ucf top_icdf.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc top_icdf.ucf -p xc5vlx85t-ff1136-2 top_icdf.ngc top_icdf.ngd  
+map -intstyle ise -p xc5vlx85t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o top_icdf_map.ncd top_icdf.ngd top_icdf.pcf 
+par -w -intstyle ise -ol high -mt off top_icdf_map.ncd top_icdf.ncd top_icdf.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top_icdf.twx top_icdf.ncd -o top_icdf.twr top_icdf.pcf -ucf top_icdf.ucf 

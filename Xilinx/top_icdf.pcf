@@ -1,0 +1,150 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Dec 12 13:32:56 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+TIMEGRP clk = BEL "gauss_rng_0" BEL "gauss_rng_1" BEL "gauss_rng_2" BEL
+        "gauss_rng_3" BEL "gauss_rng_4" BEL "gauss_rng_5" BEL "gauss_rng_6"
+        BEL "gauss_rng_7" BEL "gauss_rng_8" BEL "gauss_rng_9" BEL
+        "gauss_rng_10" BEL "gauss_rng_11" BEL "gauss_rng_12" BEL
+        "gauss_rng_13" BEL "gauss_rng_14" BEL "gauss_rng_15" BEL
+        "ma18/Maddsub_m0_temp_mult0000" BEL "ma21/Maddsub_m1_temp_mult0000"
+        BEL "urng/b3_52" BEL "urng/b3_51" BEL "urng/b3_50" BEL "urng/b3_49"
+        BEL "urng/b3_48" BEL "urng/b3_47" BEL "urng/b3_46" BEL "urng/b3_45"
+        BEL "urng/b3_44" BEL "urng/b3_43" BEL "urng/b3_42" BEL "urng/b3_41"
+        BEL "urng/b3_40" BEL "urng/b3_39" BEL "urng/b3_38" BEL "urng/b3_37"
+        BEL "urng/b3_36" BEL "urng/b3_35" BEL "urng/b3_34" BEL "urng/b3_33"
+        BEL "urng/b3_32" BEL "urng/b3_31" BEL "urng/b3_30" BEL "urng/b3_29"
+        BEL "urng/b3_28" BEL "urng/b3_27" BEL "urng/b3_26" BEL "urng/b3_25"
+        BEL "urng/b3_24" BEL "urng/b3_23" BEL "urng/b3_22" BEL "urng/b3_21"
+        BEL "urng/b3_20" BEL "urng/b3_19" BEL "urng/b3_18" BEL "urng/b3_17"
+        BEL "urng/b3_16" BEL "urng/b3_15" BEL "urng/b3_14" BEL "urng/b3_13"
+        BEL "urng/b3_12" BEL "urng/b3_11" BEL "urng/b3_10" BEL "urng/b3_9" BEL
+        "urng/b3_8" BEL "urng/b3_7" BEL "urng/b3_6" BEL "urng/b3_5" BEL
+        "urng/b3_4" BEL "urng/b3_3" BEL "urng/b3_2" BEL "urng/b3_1" BEL
+        "urng/b3_0" BEL "urng/b1_44" BEL "urng/b1_43" BEL "urng/b1_42" BEL
+        "urng/b1_41" BEL "urng/b1_40" BEL "urng/b1_39" BEL "urng/b1_38" BEL
+        "urng/b1_37" BEL "urng/b1_36" BEL "urng/b1_35" BEL "urng/b1_34" BEL
+        "urng/b1_33" BEL "urng/b1_32" BEL "urng/b1_31" BEL "urng/b1_30" BEL
+        "urng/b1_29" BEL "urng/b1_28" BEL "urng/b1_27" BEL "urng/b1_26" BEL
+        "urng/b1_25" BEL "urng/b1_24" BEL "urng/b1_23" BEL "urng/b1_22" BEL
+        "urng/b1_21" BEL "urng/b1_20" BEL "urng/b1_19" BEL "urng/b1_18" BEL
+        "urng/b1_17" BEL "urng/b1_16" BEL "urng/b1_15" BEL "urng/b1_14" BEL
+        "urng/b1_13" BEL "urng/b1_12" BEL "urng/b1_11" BEL "urng/b1_10" BEL
+        "urng/b1_9" BEL "urng/b1_8" BEL "urng/b1_7" BEL "urng/b1_6" BEL
+        "urng/b1_5" BEL "urng/b1_4" BEL "urng/b1_3" BEL "urng/b1_2" BEL
+        "urng/b1_1" BEL "urng/b1_0" BEL "urng/b2_38" BEL "urng/b2_37" BEL
+        "urng/b2_36" BEL "urng/b2_35" BEL "urng/b2_34" BEL "urng/b2_33" BEL
+        "urng/b2_32" BEL "urng/b2_31" BEL "urng/b2_30" BEL "urng/b2_29" BEL
+        "urng/b2_28" BEL "urng/b2_27" BEL "urng/b2_26" BEL "urng/b2_25" BEL
+        "urng/b2_24" BEL "urng/b2_23" BEL "urng/b2_22" BEL "urng/b2_21" BEL
+        "urng/b2_20" BEL "urng/b2_19" BEL "urng/b2_18" BEL "urng/b2_17" BEL
+        "urng/b2_16" BEL "urng/b2_15" BEL "urng/b2_14" BEL "urng/b2_13" BEL
+        "urng/b2_12" BEL "urng/b2_11" BEL "urng/b2_10" BEL "urng/b2_9" BEL
+        "urng/b2_8" BEL "urng/b2_7" BEL "urng/b2_6" BEL "urng/b2_5" BEL
+        "urng/b2_4" BEL "urng/b2_3" BEL "urng/b2_2" BEL "urng/b2_1" BEL
+        "urng/b2_0" BEL "urng/taus_out_63" BEL "urng/taus_out_62" BEL
+        "urng/taus_out_61" BEL "urng/taus_out_60" BEL "urng/taus_out_59" BEL
+        "urng/taus_out_58" BEL "urng/taus_out_57" BEL "urng/taus_out_56" BEL
+        "urng/taus_out_55" BEL "urng/taus_out_54" BEL "urng/taus_out_53" BEL
+        "urng/taus_out_52" BEL "urng/taus_out_51" BEL "urng/taus_out_50" BEL
+        "urng/taus_out_49" BEL "urng/taus_out_48" BEL "urng/taus_out_47" BEL
+        "urng/taus_out_46" BEL "urng/taus_out_45" BEL "urng/taus_out_44" BEL
+        "urng/taus_out_43" BEL "urng/taus_out_42" BEL "urng/taus_out_41" BEL
+        "urng/taus_out_40" BEL "urng/taus_out_39" BEL "urng/taus_out_38" BEL
+        "urng/taus_out_37" BEL "urng/taus_out_36" BEL "urng/taus_out_35" BEL
+        "urng/taus_out_34" BEL "urng/taus_out_33" BEL "urng/taus_out_32" BEL
+        "urng/taus_out_17" BEL "urng/taus_out_16" BEL "urng/taus_out_15" BEL
+        "urng/taus_out_14" BEL "urng/taus_out_13" BEL "urng/taus_out_12" BEL
+        "urng/taus_out_11" BEL "urng/taus_out_10" BEL "urng/taus_out_9" BEL
+        "urng/taus_out_8" BEL "urng/taus_out_7" BEL "urng/taus_out_6" BEL
+        "urng/taus_out_5" BEL "urng/taus_out_4" BEL "urng/taus_out_3" BEL
+        "urng/taus_out_2" BEL "urng/taus_out_1" BEL "urng/taus_out_0" BEL
+        "urng/s2_63" BEL "urng/s2_62" BEL "urng/s2_61" BEL "urng/s2_60" BEL
+        "urng/s2_59" BEL "urng/s2_58" BEL "urng/s2_57" BEL "urng/s2_56" BEL
+        "urng/s2_55" BEL "urng/s2_54" BEL "urng/s2_53" BEL "urng/s2_52" BEL
+        "urng/s2_51" BEL "urng/s2_50" BEL "urng/s2_49" BEL "urng/s2_48" BEL
+        "urng/s2_47" BEL "urng/s2_46" BEL "urng/s2_45" BEL "urng/s2_44" BEL
+        "urng/s2_43" BEL "urng/s2_42" BEL "urng/s2_41" BEL "urng/s2_40" BEL
+        "urng/s2_39" BEL "urng/s2_38" BEL "urng/s2_37" BEL "urng/s2_36" BEL
+        "urng/s2_35" BEL "urng/s2_34" BEL "urng/s2_33" BEL "urng/s2_32" BEL
+        "urng/s2_31" BEL "urng/s2_30" BEL "urng/s2_29" BEL "urng/s2_28" BEL
+        "urng/s2_27" BEL "urng/s2_26" BEL "urng/s2_25" BEL "urng/s2_24" BEL
+        "urng/s2_23" BEL "urng/s2_22" BEL "urng/s2_21" BEL "urng/s2_20" BEL
+        "urng/s2_19" BEL "urng/s2_18" BEL "urng/s2_17" BEL "urng/s2_16" BEL
+        "urng/s2_15" BEL "urng/s2_14" BEL "urng/s2_13" BEL "urng/s2_12" BEL
+        "urng/s2_11" BEL "urng/s2_10" BEL "urng/s2_9" BEL "urng/s2_8" BEL
+        "urng/s2_7" BEL "urng/s2_6" BEL "urng/s2_5" BEL "urng/s2_4" BEL
+        "urng/s2_3" BEL "urng/s2_2" BEL "urng/s2_1" BEL "urng/s2_0" BEL
+        "urng/s1_63" BEL "urng/s1_62" BEL "urng/s1_61" BEL "urng/s1_60" BEL
+        "urng/s1_59" BEL "urng/s1_58" BEL "urng/s1_57" BEL "urng/s1_56" BEL
+        "urng/s1_55" BEL "urng/s1_54" BEL "urng/s1_53" BEL "urng/s1_52" BEL
+        "urng/s1_51" BEL "urng/s1_50" BEL "urng/s1_49" BEL "urng/s1_48" BEL
+        "urng/s1_47" BEL "urng/s1_46" BEL "urng/s1_45" BEL "urng/s1_44" BEL
+        "urng/s1_43" BEL "urng/s1_42" BEL "urng/s1_41" BEL "urng/s1_40" BEL
+        "urng/s1_39" BEL "urng/s1_38" BEL "urng/s1_37" BEL "urng/s1_36" BEL
+        "urng/s1_35" BEL "urng/s1_34" BEL "urng/s1_33" BEL "urng/s1_32" BEL
+        "urng/s1_31" BEL "urng/s1_30" BEL "urng/s1_29" BEL "urng/s1_28" BEL
+        "urng/s1_27" BEL "urng/s1_26" BEL "urng/s1_25" BEL "urng/s1_24" BEL
+        "urng/s1_23" BEL "urng/s1_22" BEL "urng/s1_21" BEL "urng/s1_20" BEL
+        "urng/s1_19" BEL "urng/s1_18" BEL "urng/s1_17" BEL "urng/s1_16" BEL
+        "urng/s1_15" BEL "urng/s1_14" BEL "urng/s1_13" BEL "urng/s1_12" BEL
+        "urng/s1_11" BEL "urng/s1_10" BEL "urng/s1_9" BEL "urng/s1_8" BEL
+        "urng/s1_7" BEL "urng/s1_6" BEL "urng/s1_5" BEL "urng/s1_4" BEL
+        "urng/s1_3" BEL "urng/s1_2" BEL "urng/s1_1" BEL "urng/s1_0" BEL
+        "urng/s3_63" BEL "urng/s3_62" BEL "urng/s3_61" BEL "urng/s3_60" BEL
+        "urng/s3_59" BEL "urng/s3_58" BEL "urng/s3_57" BEL "urng/s3_56" BEL
+        "urng/s3_55" BEL "urng/s3_54" BEL "urng/s3_53" BEL "urng/s3_52" BEL
+        "urng/s3_51" BEL "urng/s3_50" BEL "urng/s3_49" BEL "urng/s3_48" BEL
+        "urng/s3_47" BEL "urng/s3_46" BEL "urng/s3_45" BEL "urng/s3_44" BEL
+        "urng/s3_43" BEL "urng/s3_42" BEL "urng/s3_41" BEL "urng/s3_40" BEL
+        "urng/s3_39" BEL "urng/s3_38" BEL "urng/s3_37" BEL "urng/s3_36" BEL
+        "urng/s3_35" BEL "urng/s3_34" BEL "urng/s3_33" BEL "urng/s3_32" BEL
+        "urng/s3_31" BEL "urng/s3_30" BEL "urng/s3_29" BEL "urng/s3_28" BEL
+        "urng/s3_27" BEL "urng/s3_26" BEL "urng/s3_25" BEL "urng/s3_24" BEL
+        "urng/s3_23" BEL "urng/s3_22" BEL "urng/s3_21" BEL "urng/s3_20" BEL
+        "urng/s3_19" BEL "urng/s3_18" BEL "urng/s3_17" BEL "urng/s3_16" BEL
+        "urng/s3_15" BEL "urng/s3_14" BEL "urng/s3_13" BEL "urng/s3_12" BEL
+        "urng/s3_11" BEL "urng/s3_10" BEL "urng/s3_9" BEL "urng/s3_8" BEL
+        "urng/s3_7" BEL "urng/s3_6" BEL "urng/s3_5" BEL "urng/s3_4" BEL
+        "urng/s3_3" BEL "urng/s3_2" BEL "urng/s3_1" BEL "urng/s3_0" BEL
+        "LZD/zero_pos_4" BEL "LZD/zero_pos_3" BEL "LZD/zero_pos_2" BEL
+        "LZD/zero_pos_1" BEL "LZD/zero_pos_0" BEL "mask20/masked_data_14" BEL
+        "mask20/masked_data_13" BEL "mask20/masked_data_12" BEL
+        "mask20/masked_data_11" BEL "mask20/masked_data_10" BEL
+        "mask20/masked_data_9" BEL "mask20/masked_data_8" BEL
+        "mask20/masked_data_7" BEL "mask20/masked_data_6" BEL
+        "mask20/masked_data_5" BEL "mask20/masked_data_4" BEL
+        "mask20/masked_data_3" BEL "mask20/masked_data_2" BEL
+        "mask20/masked_data_1" BEL "mask20/masked_data_0" BEL
+        "rom_coef/coef_acc_56" BEL "rom_coef/coef_acc_55" BEL
+        "rom_coef/coef_acc_54" BEL "rom_coef/coef_acc_53" BEL
+        "rom_coef/coef_acc_52" BEL "rom_coef/coef_acc_51" BEL
+        "rom_coef/coef_acc_50" BEL "rom_coef/coef_acc_49" BEL
+        "rom_coef/coef_acc_48" BEL "rom_coef/coef_acc_47" BEL
+        "rom_coef/coef_acc_46" BEL "rom_coef/coef_acc_45" BEL
+        "rom_coef/coef_acc_44" BEL "rom_coef/coef_acc_43" BEL
+        "rom_coef/coef_acc_42" BEL "rom_coef/coef_acc_41" BEL
+        "rom_coef/coef_acc_40" BEL "rom_coef/coef_acc_39" BEL
+        "rom_coef/coef_acc_38" BEL "rom_coef/coef_acc_36" BEL
+        "rom_coef/coef_acc_35" BEL "rom_coef/coef_acc_34" BEL
+        "rom_coef/coef_acc_33" BEL "rom_coef/coef_acc_32" BEL
+        "rom_coef/coef_acc_31" BEL "rom_coef/coef_acc_30" BEL
+        "rom_coef/coef_acc_29" BEL "rom_coef/coef_acc_28" BEL
+        "rom_coef/coef_acc_27" BEL "rom_coef/coef_acc_26" BEL
+        "rom_coef/coef_acc_25" BEL "rom_coef/coef_acc_24" BEL
+        "rom_coef/coef_acc_23" BEL "rom_coef/coef_acc_22" BEL
+        "rom_coef/coef_acc_21" BEL "rom_coef/coef_acc_19" BEL
+        "rom_coef/coef_acc_18" BEL "rom_coef/coef_acc_17" BEL
+        "rom_coef/coef_acc_16" BEL "rom_coef/coef_acc_15" BEL
+        "rom_coef/coef_acc_14" BEL "rom_coef/coef_acc_13" BEL
+        "rom_coef/coef_acc_12" BEL "rom_coef/coef_acc_11" BEL
+        "rom_coef/coef_acc_10" BEL "rom_coef/coef_acc_9" BEL
+        "rom_coef/coef_acc_8" BEL "rom_coef/coef_acc_7" BEL
+        "rom_coef/coef_acc_6" BEL "rom_coef/coef_acc_5" BEL
+        "rom_coef/coef_acc_4" BEL "rom_coef/coef_acc_3" BEL
+        "rom_coef/coef_acc_2" BEL "rom_coef/coef_acc_1" BEL
+        "rom_coef/coef_acc_0" BEL "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 3.495 ns HIGH 50%;
+SCHEMATIC END;
+

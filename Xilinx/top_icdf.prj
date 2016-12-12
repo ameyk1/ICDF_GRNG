@@ -1,0 +1,7 @@
+verilog work "taus_urng64.v"
+verilog work "ROM_coef.v"
+verilog work "Mul18_Add21.v"
+verilog work "Mul18_Add18.v"
+verilog work "mask20_15.v"
+verilog work "Lead0Detect64.v"
+verilog work "top_icdf.v"

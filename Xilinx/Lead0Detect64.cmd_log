@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj ICDF -o C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/Lead0Detect64.tfi -lib work C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF//Lead0Detect64.v -module Lead0Detect64 -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

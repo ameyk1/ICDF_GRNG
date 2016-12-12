@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+Mul18_Add18 instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .en_ma18(en_ma18), 
+    .coef1(coef1), 
+    .coef2(coef2), 
+    .masked_in(masked_in), 
+    .ma18_out(ma18_out)
+    );
+
+

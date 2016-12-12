@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+taus_urng64 instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .en_taus(en_taus), 
+    .taus_out(taus_out), 
+    .s1_init(s1_init), 
+    .s2_init(s2_init), 
+    .s3_init(s3_init)
+    );
+
+

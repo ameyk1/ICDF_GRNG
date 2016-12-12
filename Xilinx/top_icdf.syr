@@ -1,0 +1,974 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: top_icdf.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_icdf.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_icdf"
+Output Format                      : NGC
+Target Device                      : xc5vlx85t-2-ff1136
+
+---- Source Options
+Top Module Name                    : top_icdf
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "taus_urng64.v" in library work
+Compiling verilog file "ROM_coef.v" in library work
+Module <taus_urng64> compiled
+Compiling verilog file "Mul18_Add21.v" in library work
+Module <ROM_coef> compiled
+Compiling verilog file "Mul18_Add18.v" in library work
+Module <Mul18_Add21> compiled
+Compiling verilog file "mask20_15.v" in library work
+Module <Mul18_Add18> compiled
+Compiling verilog file "Lead0Detect64.v" in library work
+Module <mask20_15> compiled
+Compiling verilog file "top_icdf.v" in library work
+Module <Lead0Detect64> compiled
+Module <top_icdf> compiled
+No errors in compilation
+Analysis of file <"top_icdf.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top_icdf> in library <work>.
+
+Analyzing hierarchy for module <taus_urng64> in library <work>.
+
+Analyzing hierarchy for module <Lead0Detect64> in library <work>.
+
+Analyzing hierarchy for module <mask20_15> in library <work>.
+
+Analyzing hierarchy for module <ROM_coef> in library <work>.
+
+Analyzing hierarchy for module <Mul18_Add18> in library <work>.
+
+Analyzing hierarchy for module <Mul18_Add21> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top_icdf>.
+Module <top_icdf> is correct for synthesis.
+ 
+Analyzing module <taus_urng64> in library <work>.
+Module <taus_urng64> is correct for synthesis.
+ 
+Analyzing module <Lead0Detect64> in library <work>.
+Module <Lead0Detect64> is correct for synthesis.
+ 
+Analyzing module <mask20_15> in library <work>.
+Module <mask20_15> is correct for synthesis.
+ 
+Analyzing module <ROM_coef> in library <work>.
+Module <ROM_coef> is correct for synthesis.
+ 
+Analyzing module <Mul18_Add18> in library <work>.
+Module <Mul18_Add18> is correct for synthesis.
+ 
+Analyzing module <Mul18_Add21> in library <work>.
+Module <Mul18_Add21> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <taus_urng64>.
+    Related source file is "taus_urng64.v".
+    Found 64-bit register for signal <taus_out>.
+    Found 64-bit register for signal <b1>.
+    Found 1-bit xor2 for signal <b1$xor0001> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0002> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0003> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0004> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0005> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0006> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0007> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0008> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0009> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0010> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0011> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0012> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0013> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0014> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0015> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0016> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0017> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0018> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0019> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0020> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0021> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0022> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0023> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0024> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0025> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0026> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0027> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0028> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0029> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0030> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0031> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0032> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0033> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0034> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0035> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0036> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0037> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0038> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0039> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0040> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0041> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0042> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0043> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0044> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0045> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0046> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0047> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0048> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0049> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0050> created at line 35.
+    Found 1-bit xor2 for signal <b1$xor0051> created at line 35.
+    Found 64-bit register for signal <b2>.
+    Found 1-bit xor2 for signal <b2$xor0001> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0002> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0003> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0004> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0005> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0006> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0007> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0008> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0009> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0010> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0011> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0012> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0013> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0014> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0015> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0016> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0017> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0018> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0019> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0020> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0021> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0022> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0023> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0024> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0025> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0026> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0027> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0028> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0029> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0030> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0031> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0032> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0033> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0034> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0035> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0036> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0037> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0038> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0039> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0040> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0041> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0042> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0043> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0044> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0045> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0046> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0047> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0048> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0049> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0050> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0051> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0052> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0053> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0054> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0055> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0056> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0057> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0058> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0059> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0060> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0061> created at line 37.
+    Found 1-bit xor2 for signal <b2$xor0062> created at line 37.
+    Found 64-bit register for signal <b3>.
+    Found 1-bit xor2 for signal <b3$xor0001> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0002> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0003> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0004> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0005> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0006> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0007> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0008> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0009> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0010> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0011> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0012> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0013> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0014> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0015> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0016> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0017> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0018> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0019> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0020> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0021> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0022> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0023> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0024> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0025> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0026> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0027> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0028> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0029> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0030> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0031> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0032> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0033> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0034> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0035> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0036> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0037> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0038> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0039> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0040> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0041> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0042> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0043> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0044> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0045> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0046> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0047> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0048> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0049> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0050> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0051> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0052> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0053> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0054> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0055> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0056> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0057> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0058> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0059> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0060> created at line 39.
+    Found 1-bit xor2 for signal <b3$xor0061> created at line 39.
+    Found 64-bit register for signal <s1>.
+    Found 1-bit xor2 for signal <s1$xor0000> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0001> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0002> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0003> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0004> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0005> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0006> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0007> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0008> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0009> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0010> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0011> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0012> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0013> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0014> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0015> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0016> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0017> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0018> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0019> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0020> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0021> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0022> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0023> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0024> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0025> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0026> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0027> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0028> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0029> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0030> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0031> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0032> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0033> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0034> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0035> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0036> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0037> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0038> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0039> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0040> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0041> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0042> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0043> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0044> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0045> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0046> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0047> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0048> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0049> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0050> created at line 36.
+    Found 1-bit xor2 for signal <s1$xor0051> created at line 36.
+    Found 64-bit register for signal <s2>.
+    Found 1-bit xor2 for signal <s2$xor0000> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0001> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0002> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0003> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0004> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0005> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0006> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0007> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0008> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0009> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0010> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0011> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0012> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0013> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0014> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0015> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0016> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0017> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0018> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0019> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0020> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0021> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0022> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0023> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0024> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0025> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0026> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0027> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0028> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0029> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0030> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0031> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0032> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0033> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0034> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0035> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0036> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0037> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0038> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0039> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0040> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0041> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0042> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0043> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0044> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0045> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0046> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0047> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0048> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0049> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0050> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0051> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0052> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0053> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0054> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0055> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0056> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0057> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0058> created at line 38.
+    Found 1-bit xor2 for signal <s2$xor0059> created at line 38.
+    Found 64-bit register for signal <s3>.
+    Found 1-bit xor2 for signal <s3$xor0000> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0001> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0002> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0003> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0004> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0005> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0006> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0007> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0008> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0009> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0010> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0011> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0012> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0013> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0014> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0015> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0016> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0017> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0018> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0019> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0020> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0021> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0022> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0023> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0024> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0025> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0026> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0027> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0028> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0029> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0030> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0031> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0032> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0033> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0034> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0035> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0036> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0037> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0038> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0039> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0040> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0041> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0042> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0043> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0044> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0045> created at line 40.
+    Found 1-bit xor2 for signal <s3$xor0046> created at line 40.
+    Found 64-bit xor3 for signal <taus_out$xor0000> created at line 41.
+    Summary:
+	inferred 448 D-type flip-flop(s).
+	inferred  64 Xor(s).
+Unit <taus_urng64> synthesized.
+
+
+Synthesizing Unit <Lead0Detect64>.
+    Related source file is "Lead0Detect64.v".
+WARNING:Xst:646 - Signal <v4<2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 6-bit register for signal <zero_pos>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <Lead0Detect64> synthesized.
+
+
+Synthesizing Unit <mask20_15>.
+    Related source file is "mask20_15.v".
+    Found 32x15-bit ROM for signal <mask$mux0000>.
+    Found 15-bit register for signal <masked_data>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  15 D-type flip-flop(s).
+Unit <mask20_15> synthesized.
+
+
+Synthesizing Unit <ROM_coef>.
+    Related source file is "ROM_coef.v".
+    Found 128x57-bit ROM for signal <coef_acc>.
+    Found 21-bit register for signal <coef0>.
+    Found 18-bit register for signal <coef1>.
+    Found 18-bit register for signal <coef2>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  57 D-type flip-flop(s).
+Unit <ROM_coef> synthesized.
+
+
+Synthesizing Unit <Mul18_Add18>.
+    Related source file is "Mul18_Add18.v".
+WARNING:Xst:646 - Signal <ma18_signed<36:18>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 18-bit register for signal <c1_signed>.
+    Found 18-bit register for signal <c2_signed>.
+    Found 36-bit register for signal <m0_temp>.
+    Found 18x15-bit multiplier for signal <m0_temp$mult0000> created at line 33.
+    Found 37-bit register for signal <ma18_signed>.
+    Found 37-bit adder for signal <ma18_signed$add0000> created at line 34.
+    Found 15-bit register for signal <mask_signed>.
+    Summary:
+	inferred 124 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <Mul18_Add18> synthesized.
+
+
+Synthesizing Unit <Mul18_Add21>.
+    Related source file is "Mul18_Add21.v".
+WARNING:Xst:646 - Signal <ma21_signed<36:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 21-bit register for signal <c0_signed>.
+    Found 36-bit register for signal <m1_temp>.
+    Found 18x15-bit multiplier for signal <m1_temp$mult0000> created at line 34.
+    Found 18-bit register for signal <ma18_signed>.
+    Found 37-bit register for signal <ma21_signed>.
+    Found 37-bit adder for signal <ma21_signed$add0000> created at line 35.
+    Found 15-bit register for signal <mask_signed>.
+    Summary:
+	inferred 127 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <Mul18_Add21> synthesized.
+
+
+Synthesizing Unit <top_icdf>.
+    Related source file is "top_icdf.v".
+    Found 16-bit register for signal <gauss_rng>.
+    Found 16-bit adder for signal <gauss_rng$addsub0000> created at line 114.
+    Found 6-bit adder carry out for signal <segment$addsub0001> created at line 75.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <top_icdf> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 128x57-bit ROM                                        : 1
+ 32x15-bit ROM                                         : 1
+# Multipliers                                          : 2
+ 18x15-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 4
+ 16-bit adder                                          : 1
+ 37-bit adder                                          : 2
+ 6-bit adder carry out                                 : 1
+# Registers                                            : 23
+ 15-bit register                                       : 3
+ 16-bit register                                       : 1
+ 18-bit register                                       : 5
+ 21-bit register                                       : 2
+ 36-bit register                                       : 2
+ 37-bit register                                       : 2
+ 6-bit register                                        : 1
+ 64-bit register                                       : 7
+# Xors                                                 : 334
+ 1-bit xor2                                            : 333
+ 64-bit xor3                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <b1_45> in Unit <urng> is equivalent to the following 54 FFs/Latches, which will be removed : <b1_46> <b1_47> <b1_48> <b1_49> <b1_50> <b1_51> <b1_52> <b1_53> <b1_54> <b1_55> <b1_56> <b1_57> <b1_58> <b1_59> <b1_60> <b1_61> <b1_62> <b1_63> <b2_39> <b2_40> <b2_41> <b2_42> <b2_43> <b2_44> <b2_45> <b2_46> <b2_47> <b2_48> <b2_49> <b2_50> <b2_51> <b2_52> <b2_53> <b2_54> <b2_55> <b2_56> <b2_57> <b2_58> <b2_59> <b2_60> <b2_61> <b2_62> <b2_63> <b3_53> <b3_54> <b3_55> <b3_56> <b3_57> <b3_58> <b3_59> <b3_60> <b3_61> <b3_62> <b3_63> 
+INFO:Xst:2261 - The FF/Latch <m0_temp_32> in Unit <ma18> is equivalent to the following 3 FFs/Latches, which will be removed : <m0_temp_33> <m0_temp_34> <m0_temp_35> 
+INFO:Xst:2261 - The FF/Latch <m1_temp_32> in Unit <ma21> is equivalent to the following 3 FFs/Latches, which will be removed : <m1_temp_33> <m1_temp_34> <m1_temp_35> 
+WARNING:Xst:1710 - FF/Latch <b1_45> (without init value) has a constant value of 0 in block <urng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <zero_pos_5> (without init value) has a constant value of 0 in block <LZD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <taus_out_18> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_19> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_20> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_21> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_22> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_23> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_24> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_25> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_26> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_27> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_28> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_29> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_30> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <taus_out_31> of sequential type is unconnected in block <urng>.
+WARNING:Xst:2677 - Node <ma18_signed_18> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_19> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_20> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_21> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_22> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_23> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_24> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_25> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_26> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_27> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_28> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_29> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_30> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_31> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_32> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_33> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_34> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_35> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma18_signed_36> of sequential type is unconnected in block <ma18>.
+WARNING:Xst:2677 - Node <ma21_signed_16> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_17> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_18> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_19> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_20> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_21> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_22> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_23> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_24> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_25> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_26> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_27> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_28> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_29> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_30> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_31> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_32> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_33> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_34> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_35> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2677 - Node <ma21_signed_36> of sequential type is unconnected in block <ma21>.
+WARNING:Xst:2404 -  FFs/Latches <b2<63:39>> (without init value) have a constant value of 0 in block <taus_urng64>.
+WARNING:Xst:2404 -  FFs/Latches <b1<63:45>> (without init value) have a constant value of 0 in block <taus_urng64>.
+WARNING:Xst:2404 -  FFs/Latches <b3<63:53>> (without init value) have a constant value of 0 in block <taus_urng64>.
+WARNING:Xst:2404 -  FFs/Latches <zero_pos<5:5>> (without init value) have a constant value of 0 in block <Lead0Detect64>.
+
+Synthesizing (advanced) Unit <Mul18_Add18>.
+	Multiplier <Mmult_m0_temp_mult0000> in block <Mul18_Add18> and adder/subtractor <Madd_ma18_signed_add0000> in block <Mul18_Add18> are combined into a MAC<Maddsub_m0_temp_mult0000>.
+	The following registers are also absorbed by the MAC: <c2_signed> in block <Mul18_Add18>, <mask_signed> in block <Mul18_Add18>, <m0_temp> in block <Mul18_Add18>, <ma18_signed> in block <Mul18_Add18>, <c1_signed> in block <Mul18_Add18>.
+Unit <Mul18_Add18> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Mul18_Add21>.
+	Multiplier <Mmult_m1_temp_mult0000> in block <Mul18_Add21> and adder/subtractor <Madd_ma21_signed_add0000> in block <Mul18_Add21> are combined into a MAC<Maddsub_m1_temp_mult0000>.
+	The following registers are also absorbed by the MAC: <ma18_signed> in block <Mul18_Add21>, <mask_signed> in block <Mul18_Add21>, <m1_temp> in block <Mul18_Add21>, <ma21_signed> in block <Mul18_Add21>, <c0_signed> in block <Mul18_Add21>.
+Unit <Mul18_Add21> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ROM_coef>.
+INFO:Xst:3016 - Currently unable to implement the ROM <Mrom_coef_acc> as a read-only block RAM. Please look for coming software updates.
+Unit <ROM_coef> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 128x57-bit ROM                                        : 1
+ 32x15-bit ROM                                         : 1
+# MACs                                                 : 2
+ 18x15-to-37-bit MAC                                   : 2
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 1
+ 6-bit adder carry out                                 : 1
+# Registers                                            : 486
+ Flip-Flops                                            : 486
+# Xors                                                 : 334
+ 1-bit xor2                                            : 333
+ 64-bit xor3                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <coef_acc_37> (without init value) has a constant value of 0 in block <ROM_coef>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <top_icdf> ...
+
+Optimizing unit <taus_urng64> ...
+
+Optimizing unit <Lead0Detect64> ...
+
+Optimizing unit <mask20_15> ...
+
+Optimizing unit <ROM_coef> ...
+WARNING:Xst:1710 - FF/Latch <rom_coef/coef_acc_20> (without init value) has a constant value of 0 in block <top_icdf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <urng/taus_out_31> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_30> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_29> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_28> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_27> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_26> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_25> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_24> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_23> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_22> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_21> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_20> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_19> of sequential type is unconnected in block <top_icdf>.
+WARNING:Xst:2677 - Node <urng/taus_out_18> of sequential type is unconnected in block <top_icdf>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_icdf, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 470
+ Flip-Flops                                            : 470
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_icdf.ngr
+Top Level Output File Name         : top_icdf
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 211
+
+Cell Usage :
+# BELS                             : 532
+#      GND                         : 1
+#      INV                         : 21
+#      LUT1                        : 1
+#      LUT2                        : 140
+#      LUT3                        : 125
+#      LUT4                        : 60
+#      LUT5                        : 93
+#      LUT6                        : 58
+#      MUXCY                       : 15
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 470
+#      FD                          : 192
+#      FDR                         : 278
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 210
+#      IBUF                        : 194
+#      OBUF                        : 16
+# DSPs                             : 2
+#      DSP48E                      : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx85tff1136-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             470  out of  51840     0%  
+ Number of Slice LUTs:                  498  out of  51840     0%  
+    Number used as Logic:               498  out of  51840     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    523
+   Number with an unused Flip Flop:      53  out of    523    10%  
+   Number with an unused LUT:            25  out of    523     4%  
+   Number of fully used LUT-FF pairs:   445  out of    523    85%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                         211
+ Number of bonded IOBs:                 211  out of    480    43%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48Es:                       2  out of     48     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 472   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.873ns (Maximum Frequency: 348.056MHz)
+   Minimum input arrival time before clock: 3.549ns
+   Maximum output required time after clock: 2.826ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.873ns (frequency: 348.056MHz)
+  Total number of paths / destination ports: 2461 / 558
+-------------------------------------------------------------------------
+Delay:               2.873ns (Levels of Logic = 4)
+  Source:            urng/taus_out_44 (FF)
+  Destination:       LZD/zero_pos_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: urng/taus_out_44 to LZD/zero_pos_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.396   0.671  urng/taus_out_44 (urng/taus_out_44)
+     LUT4:I0->O            4   0.086   0.425  LZD/v2_11_or00001 (LZD/v2<11>)
+     LUT5:I4->O            3   0.086   0.910  LZD/v3_5_or00001 (LZD/v3<5>)
+     LUT6:I0->O            1   0.086   0.000  LZD/p5_1_mux0000<2>_F (N31)
+     MUXF7:I0->O           1   0.213   0.000  LZD/p5_1_mux0000<2> (LZD/p5<1><2>)
+     FDR:D                    -0.022          LZD/zero_pos_2
+    ----------------------------------------
+    Total                      2.873ns (0.867ns logic, 2.006ns route)
+                                       (30.2% logic, 69.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1632 / 525
+-------------------------------------------------------------------------
+Offset:              3.549ns (Levels of Logic = 4)
+  Source:            en_icdf (PAD)
+  Destination:       rom_coef/coef_acc_48 (FF)
+  Destination Clock: clk rising
+
+  Data Path: en_icdf to rom_coef/coef_acc_48
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           198   0.694   0.621  en_icdf_IBUF (en_icdf_IBUF)
+     LUT2:I0->O          284   0.086   1.048  urng/b1_or00001 (LZD/zero_pos_or0000)
+     LUT6:I0->O           40   0.086   0.928  segment<2>1 (segment<2>)
+     LUT6:I1->O            1   0.086   0.000  rom_coef_Mrom_coef_acc131 (rom_coef/coef_acc<13>)
+     FDR:D                    -0.022          rom_coef/coef_acc_13
+    ----------------------------------------
+    Total                      3.549ns (0.952ns logic, 2.597ns route)
+                                       (26.8% logic, 73.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.826ns (Levels of Logic = 1)
+  Source:            gauss_rng_15 (FF)
+  Destination:       gauss_rng<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: gauss_rng_15 to gauss_rng<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.396   0.286  gauss_rng_15 (gauss_rng_15)
+     OBUF:I->O                 2.144          gauss_rng_15_OBUF (gauss_rng<15>)
+    ----------------------------------------
+    Total                      2.826ns (2.540ns logic, 0.286ns route)
+                                       (89.9% logic, 10.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.30 secs
+ 
+--> 
+
+Total memory usage is 377600 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   79 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

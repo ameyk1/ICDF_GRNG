@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf_tb_isim_beh.exe" -prj "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf_tb_beh.prj" "work.top_icdf_tb" "work.glbl" 

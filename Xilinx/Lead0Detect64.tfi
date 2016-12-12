@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+Lead0Detect64 instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .en(en), 
+    .in(in), 
+    .zero_pos(zero_pos)
+    );
+
+

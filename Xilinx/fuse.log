@@ -1,0 +1,31 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf_tb_isim_beh.exe" -prj "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf_tb_beh.prj" "work.top_icdf_tb" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/taus_urng64.v" into library work
+Analyzing Verilog file "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/ROM_coef.v" into library work
+Analyzing Verilog file "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/Mul18_Add21.v" into library work
+Analyzing Verilog file "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/Mul18_Add18.v" into library work
+Analyzing Verilog file "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/mask20_15.v" into library work
+Analyzing Verilog file "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/Lead0Detect64.v" into library work
+Analyzing Verilog file "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf.v" into library work
+Analyzing Verilog file "C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module taus_urng64
+Compiling module Lead0Detect64
+Compiling module mask20_15
+Compiling module ROM_coef
+Compiling module Mul18_Add18
+Compiling module Mul18_Add21
+Compiling module top_icdf
+Compiling module top_icdf_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable C:/Users/Amey/Documents/STUDY/Internship/VeloDyne/ICDF/top_icdf_tb_isim_beh.exe
+Fuse Memory Usage: 32568 KB
+Fuse CPU Usage: 483 ms

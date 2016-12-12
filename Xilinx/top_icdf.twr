@@ -1,0 +1,390 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml top_icdf.twx top_icdf.ncd -o top_icdf.twr top_icdf.pcf
+-ucf top_icdf.ucf
+
+Design file:              top_icdf.ncd
+Physical constraint file: top_icdf.pcf
+Device,package,speed:     xc5vlx85t,ff1136,-2 (PRODUCTION 1.73 2013-10-13, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 3.495 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2461 paths analyzed, 1156 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.120ns.
+--------------------------------------------------------------------------------
+
+Paths for end point urng/taus_out_15 (SLICE_X32Y56.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.375ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               urng/s1_15 (FF)
+  Destination:          urng/taus_out_15 (FF)
+  Requirement:          3.495ns
+  Data Path Delay:      2.774ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.311ns (1.110 - 1.421)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 3.495ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: urng/s1_15 to urng/taus_out_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y80.DQ      Tcko                  0.375   urng/s1<15>
+                                                       urng/s1_15
+    SLICE_X32Y56.D6      net (fanout=3)        2.392   urng/s1<15>
+    SLICE_X32Y56.CLK     Tas                   0.007   urng/taus_out<15>
+                                                       urng/Mxor_taus_out_xor0000_15_xo<0>1
+                                                       urng/taus_out_15
+    -------------------------------------------------  ---------------------------
+    Total                                      2.774ns (0.382ns logic, 2.392ns route)
+                                                       (13.8% logic, 86.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point gauss_rng_15 (SLICE_X40Y73.D5), 16 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.504ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ma21/Maddsub_m1_temp_mult0000 (DSP)
+  Destination:          gauss_rng_15 (FF)
+  Requirement:          3.495ns
+  Data Path Delay:      2.809ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.147ns (0.447 - 0.594)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 3.495ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ma21/Maddsub_m1_temp_mult0000 to gauss_rng_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X0Y25.P0       Tdspcko_PP            0.480   ma21/Maddsub_m1_temp_mult0000
+                                                       ma21/Maddsub_m1_temp_mult0000
+    SLICE_X41Y70.A4      net (fanout=2)        1.019   ma21_out<0>
+    SLICE_X41Y70.COUT    Topcya                0.438   Madd_gauss_rng_addsub0000_cy<3>
+                                                       ma21_out<0>_rt
+                                                       Madd_gauss_rng_addsub0000_cy<3>
+    SLICE_X41Y71.CIN     net (fanout=1)        0.000   Madd_gauss_rng_addsub0000_cy<3>
+    SLICE_X41Y71.COUT    Tbyp                  0.091   Madd_gauss_rng_addsub0000_cy<7>
+                                                       Madd_gauss_rng_addsub0000_cy<7>
+    SLICE_X41Y72.CIN     net (fanout=1)        0.000   Madd_gauss_rng_addsub0000_cy<7>
+    SLICE_X41Y72.COUT    Tbyp                  0.091   Madd_gauss_rng_addsub0000_cy<11>
+                                                       Madd_gauss_rng_addsub0000_cy<11>
+    SLICE_X41Y73.CIN     net (fanout=1)        0.000   Madd_gauss_rng_addsub0000_cy<11>
+    SLICE_X41Y73.DMUX    Tcind                 0.345   gauss_rng_addsub0000<15>
+                                                       Madd_gauss_rng_addsub0000_xor<15>
+    SLICE_X40Y73.D5      net (fanout=1)        0.338   gauss_rng_addsub0000<15>
+    SLICE_X40Y73.CLK     Tas                   0.007   gauss_rng_15
+                                                       gauss_rng_mux0000<15>1
+                                                       gauss_rng_15
+    -------------------------------------------------  ---------------------------
+    Total                                      2.809ns (1.452ns logic, 1.357ns route)
+                                                       (51.7% logic, 48.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.595ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ma21/Maddsub_m1_temp_mult0000 (DSP)
+  Destination:          gauss_rng_15 (FF)
+  Requirement:          3.495ns
+  Data Path Delay:      2.718ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.147ns (0.447 - 0.594)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 3.495ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ma21/Maddsub_m1_temp_mult0000 to gauss_rng_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X0Y25.P4       Tdspcko_PP            0.480   ma21/Maddsub_m1_temp_mult0000
+                                                       ma21/Maddsub_m1_temp_mult0000
+    SLICE_X41Y71.A4      net (fanout=2)        1.019   ma21_out<4>
+    SLICE_X41Y71.COUT    Topcya                0.438   Madd_gauss_rng_addsub0000_cy<7>
+                                                       Madd_gauss_rng_not0000<4>1_INV_0
+                                                       Madd_gauss_rng_addsub0000_cy<7>
+    SLICE_X41Y72.CIN     net (fanout=1)        0.000   Madd_gauss_rng_addsub0000_cy<7>
+    SLICE_X41Y72.COUT    Tbyp                  0.091   Madd_gauss_rng_addsub0000_cy<11>
+                                                       Madd_gauss_rng_addsub0000_cy<11>
+    SLICE_X41Y73.CIN     net (fanout=1)        0.000   Madd_gauss_rng_addsub0000_cy<11>
+    SLICE_X41Y73.DMUX    Tcind                 0.345   gauss_rng_addsub0000<15>
+                                                       Madd_gauss_rng_addsub0000_xor<15>
+    SLICE_X40Y73.D5      net (fanout=1)        0.338   gauss_rng_addsub0000<15>
+    SLICE_X40Y73.CLK     Tas                   0.007   gauss_rng_15
+                                                       gauss_rng_mux0000<15>1
+                                                       gauss_rng_15
+    -------------------------------------------------  ---------------------------
+    Total                                      2.718ns (1.361ns logic, 1.357ns route)
+                                                       (50.1% logic, 49.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.623ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ma21/Maddsub_m1_temp_mult0000 (DSP)
+  Destination:          gauss_rng_15 (FF)
+  Requirement:          3.495ns
+  Data Path Delay:      2.690ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.147ns (0.447 - 0.594)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 3.495ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: ma21/Maddsub_m1_temp_mult0000 to gauss_rng_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X0Y25.P1       Tdspcko_PP            0.480   ma21/Maddsub_m1_temp_mult0000
+                                                       ma21/Maddsub_m1_temp_mult0000
+    SLICE_X41Y70.B5      net (fanout=2)        0.907   ma21_out<1>
+    SLICE_X41Y70.COUT    Topcyb                0.431   Madd_gauss_rng_addsub0000_cy<3>
+                                                       Madd_gauss_rng_not0000<1>1_INV_0
+                                                       Madd_gauss_rng_addsub0000_cy<3>
+    SLICE_X41Y71.CIN     net (fanout=1)        0.000   Madd_gauss_rng_addsub0000_cy<3>
+    SLICE_X41Y71.COUT    Tbyp                  0.091   Madd_gauss_rng_addsub0000_cy<7>
+                                                       Madd_gauss_rng_addsub0000_cy<7>
+    SLICE_X41Y72.CIN     net (fanout=1)        0.000   Madd_gauss_rng_addsub0000_cy<7>
+    SLICE_X41Y72.COUT    Tbyp                  0.091   Madd_gauss_rng_addsub0000_cy<11>
+                                                       Madd_gauss_rng_addsub0000_cy<11>
+    SLICE_X41Y73.CIN     net (fanout=1)        0.000   Madd_gauss_rng_addsub0000_cy<11>
+    SLICE_X41Y73.DMUX    Tcind                 0.345   gauss_rng_addsub0000<15>
+                                                       Madd_gauss_rng_addsub0000_xor<15>
+    SLICE_X40Y73.D5      net (fanout=1)        0.338   gauss_rng_addsub0000<15>
+    SLICE_X40Y73.CLK     Tas                   0.007   gauss_rng_15
+                                                       gauss_rng_mux0000<15>1
+                                                       gauss_rng_15
+    -------------------------------------------------  ---------------------------
+    Total                                      2.690ns (1.445ns logic, 1.245ns route)
+                                                       (53.7% logic, 46.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point urng/taus_out_12 (SLICE_X32Y56.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.569ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               urng/s1_12 (FF)
+  Destination:          urng/taus_out_12 (FF)
+  Requirement:          3.495ns
+  Data Path Delay:      2.580ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.311ns (1.110 - 1.421)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 3.495ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: urng/s1_12 to urng/taus_out_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y80.AQ      Tcko                  0.375   urng/s1<15>
+                                                       urng/s1_12
+    SLICE_X32Y56.A6      net (fanout=3)        2.199   urng/s1<12>
+    SLICE_X32Y56.CLK     Tas                   0.006   urng/taus_out<15>
+                                                       urng/Mxor_taus_out_xor0000_12_xo<0>1
+                                                       urng/taus_out_12
+    -------------------------------------------------  ---------------------------
+    Total                                      2.580ns (0.381ns logic, 2.199ns route)
+                                                       (14.8% logic, 85.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 3.495 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point ma18/Maddsub_m0_temp_mult0000 (DSP48_X0Y24.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.222ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               rom_coef/coef_acc_25 (FF)
+  Destination:          ma18/Maddsub_m0_temp_mult0000 (DSP)
+  Requirement:          0.000ns
+  Data Path Delay:      0.295ns (Levels of Logic = 0)
+  Clock Path Skew:      0.073ns (0.597 - 0.524)
+  Source Clock:         clk_BUFGP rising at 3.495ns
+  Destination Clock:    clk_BUFGP rising at 3.495ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: rom_coef/coef_acc_25 to ma18/Maddsub_m0_temp_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y61.CQ      Tcko                  0.345   rom_coef/coef_acc_26
+                                                       rom_coef/coef_acc_25
+    DSP48_X0Y24.C4       net (fanout=1)        0.252   rom_coef/coef_acc_25
+    DSP48_X0Y24.CLK      Tdspckd_CC  (-Th)     0.302   ma18/Maddsub_m0_temp_mult0000
+                                                       ma18/Maddsub_m0_temp_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                      0.295ns (0.043ns logic, 0.252ns route)
+                                                       (14.6% logic, 85.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ma21/Maddsub_m1_temp_mult0000 (DSP48_X0Y25.C8), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.223ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               rom_coef/coef_acc_8 (FF)
+  Destination:          ma21/Maddsub_m1_temp_mult0000 (DSP)
+  Requirement:          0.000ns
+  Data Path Delay:      0.295ns (Levels of Logic = 0)
+  Clock Path Skew:      0.072ns (0.594 - 0.522)
+  Source Clock:         clk_BUFGP rising at 3.495ns
+  Destination Clock:    clk_BUFGP rising at 3.495ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: rom_coef/coef_acc_8 to ma21/Maddsub_m1_temp_mult0000
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y62.CQ      Tcko                  0.345   rom_coef/coef_acc_9
+                                                       rom_coef/coef_acc_8
+    DSP48_X0Y25.C8       net (fanout=1)        0.252   rom_coef/coef_acc_8
+    DSP48_X0Y25.CLK      Tdspckd_CC  (-Th)     0.302   ma21/Maddsub_m1_temp_mult0000
+                                                       ma21/Maddsub_m1_temp_mult0000
+    -------------------------------------------------  ---------------------------
+    Total                                      0.295ns (0.043ns logic, 0.252ns route)
+                                                       (14.6% logic, 85.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point urng/s1_15 (SLICE_X10Y80.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.249ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               urng/b1_15 (FF)
+  Destination:          urng/s1_15 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.429ns (Levels of Logic = 1)
+  Clock Path Skew:      0.180ns (1.421 - 1.241)
+  Source Clock:         clk_BUFGP rising at 3.495ns
+  Destination Clock:    clk_BUFGP rising at 3.495ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: urng/b1_15 to urng/s1_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X10Y79.DQ      Tcko                  0.345   urng/b1<15>
+                                                       urng/b1_15
+    SLICE_X10Y80.D6      net (fanout=1)        0.239   urng/b1<15>
+    SLICE_X10Y80.CLK     Tah         (-Th)     0.155   urng/s1<15>
+                                                       urng/s1_mux0000<15>1
+                                                       urng/s1_15
+    -------------------------------------------------  ---------------------------
+    Total                                      0.429ns (0.190ns logic, 0.239ns route)
+                                                       (44.3% logic, 55.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 3.495 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 1.495ns (period - min period limit)
+  Period: 3.495ns
+  Min period limit: 2.000ns (500.000MHz) (Tdspper_P)
+  Physical resource: ma18/Maddsub_m0_temp_mult0000/CLK
+  Logical resource: ma18/Maddsub_m0_temp_mult0000/CLK
+  Location pin: DSP48_X0Y24.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 1.495ns (period - min period limit)
+  Period: 3.495ns
+  Min period limit: 2.000ns (500.000MHz) (Tdspper_P)
+  Physical resource: ma21/Maddsub_m1_temp_mult0000/CLK
+  Logical resource: ma21/Maddsub_m1_temp_mult0000/CLK
+  Location pin: DSP48_X0Y25.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 1.997ns (period - min period limit)
+  Period: 3.495ns
+  Min period limit: 1.498ns (667.557MHz) (Tbgper_I)
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGCTRL_X0Y0.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.120|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 2461 paths, 0 nets, and 1432 connections
+
+Design statistics:
+   Minimum period:   3.120ns{1}   (Maximum frequency: 320.513MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Dec 12 13:33:32 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 393 MB
+
+
+
